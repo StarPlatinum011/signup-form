@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="style/signup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> 
+    </head>
+<body onsubmit="return false">
+    <div class="main-container">
+        <div class="left-container">
+            <div id="logo-line">
+                <img src="img/signup-logo.png" alt="pic of my bae">
+                <p>KAWAI</p>
+            </div>
+            <footer>
+                Photo from <span style="text-decoration: underline;">Reddit r/Art</span>
+            </footer>
+        </div>
+        <div class="right-container">
+            <div id="upper">
+                <p>This is not a real online service! You know you need something like This
+                    in your life to help you realize your deepest dreams.
+                    signup now to get started.
+                </p>
+                <p>You know you want to.</p>
+            </div>
+            <div id="middle-form">
+                <p style="margin: 0.7rem 0 0 0;">Let's do this!</p>
+                <form action="" method="post" name="signup-form">
+                    <fieldset>
+                        <ul>
+                            <li>
+                                <label for="f-name">First Name</label>
+                                <input type="text" name="f-name" id="f-name" placeholder="Loki">
+                            </li>
+                            <li>
+                                <label for="l-name">Last Name</label>
+                                <input type="text" name="l-name" id="l-name" placeholder="Laufeyson">
+                                
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" placeholder="loki@exmaple.com" pattern="[^ @]*@[^ @]*" required>
+                            </li>
+                            <li>
+                                <label for="contact">Phone Number</label>
+                                <input type="tel" name="contact" id="contact">
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <label for="password">Password</label>
+                                <input type="password" name="password" id="password" required>
+                            </li>
+                            <li>
+                                <label for="c-password">Confirm Password</label>
+                                <input type="password" name="c-password" id="c-password" >
+                            </li>
+                        </ul>   
+                    </fieldset>
+                    <p id="error-msg"></p>
+                    <input id="submit" type="submit" value="submit">
+
+                </form>
+            </div>
+            <div id="lower">
+                <p>already have an account? <a href="#">Sign in</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function(){
+            document.querySelector("[name='f-name']").focus();
+        }
+
+        let submit = document.querySelector("#submit");
+        let errMsg = document.querySelector("#error-msg");
+        let pass1 = document.getElementById("password");
+        let passConf = document.getElementById("c-password");
+
+        submit.addEventListener('click', ()=>{
+            
+            if(pass1.value!=passConf.value){
+
+                errMsg.textContent = "Password do not match";
+                document.querySelector("[name='password']").focus();
+                pass1.style.border = "2px solid #c72032";
+            }
+            else{
+                errMsg.textContent="";
+                pass1.style.border = "2px solid #8b8a8b";
+
+            }
+        })
+
+    
+        
+    </script>
+</body>
+</html>

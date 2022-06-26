@@ -1,0 +1,138 @@
+html{
+    box-sizing: border-box;
+}
+*, *::before,*::after{
+    box-sizing: inherit;
+}
+:root{
+    --main-font:'Varela Round', sans-serif;
+}
+
+body {    
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.main-container{
+    display: flex;
+    flex-direction: row;
+    height: 789px;
+    font-family: var(--main-font);
+}
+
+.left-container{
+    background: url(../img/bae.jpg);
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-container footer{
+    color: rgb(245, 235, 235);
+    font-size: .8rem;
+    align-self: end;
+    margin-right: 1rem;
+}
+
+.right-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:#f8f9f3;
+    width: clamp(45ch, 50%, 300ch);
+}
+
+#upper, #middle-form, #lower{
+    padding-left: 2rem;
+}
+
+#upper p, #middle-form p{
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding-right: 1rem;
+}
+
+#middle-form{
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;}
+
+form{
+    display: flex;
+    flex-direction: column;
+    
+}
+fieldset{
+    border: none;
+    padding: 0;
+}
+fieldset> ul{
+    list-style: none;
+    padding: 0;
+}
+fieldset> ul> li{
+    padding: 0 4rem 0rem 0;
+}
+input, label{
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+}
+input {
+    font-size: 16px;
+    font-size: max(16px, 1em);
+    font-family: inherit;
+    padding: 0.25em 0.5em;
+    background-color: #fff;
+    border: 2px solid #8b8a8b;
+    border-radius: 4px;
+  }
+
+  input[type='submit']{
+    color: #fff;
+    background-color: #c72032;
+    border: none;
+    padding: 0.7rem 2rem 0.7rem 2rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    width: 15rem;
+  }
+  a{
+    color: #c72032;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  #logo-line{
+    background-color:rgba(22,7,4,.5);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #logo-line> p{
+    color: #fff;
+    font-family: var(--main-font);
+    font-weight: bold;
+    font-size: 3rem;
+  }
+  #logo-line> img{
+    width: 90px;
+    height: 90px;
+    margin: 1rem 1rem 0 0;
+  }
+
+  ul{
+    display: flex;
+  }
+  #error-msg{
+    padding: 0 0 5px 0 !important;
+    margin: 0 !important;
+    font-size: 1rem !important;
+    color: #c72032;
+    font-family:monospace;
+  }
+
+
+ 
